@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Boka Omklädningsrum</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">     
+        <link rel="stylesheet" href="styles-bokning.css" />
+        <!--Expandera på (duh), ta roomchoice och applicera på vilken typ av rum som är förvalt-->
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const roomChoice = urlParams.get("room");
+            console.log(roomChoice);
+        </script>
+    </head>
+    <body>
+        <header id="clubTitle">
+            <a href="index.html" class="headerIndexLink"><h1>Skänninge Tennisförening</h1></a> 
+        </header>
+
+        <main class="container">
+            <h2>Boka Omklädningsrum</h2>
+            <form>
+                <fieldset>
+                    <h3>Rum</h3>
+                    <section class="room">
+                        <div class="flex-row">
+                            <label for="herr">Herr
+                                <input type="radio" id="herr" name="herr-dam" checked class="inline"/>
+                            </label>
+                        </div>
+                        <div class="flex-row">
+                            <label for="dam">Dam
+                                <input type="radio" id="dam" name="herr-dam" class="inline"/>
+                            </label>
+                        </div>
+                    </section>
+                </fieldset>
+                <fieldset>
+                    <h3>Tid</h3>
+                    <section class="time">
+                        <div class="flex-row">
+                            <label for="time-date">Datum <input type="date" id="time-date" name="time-date" required/></label>    
+                        </div>
+                        <div class="flex-row">
+                            <label for="time-slot">Tidslag 
+                                <select id="time-slot" name="time-slot" required >
+                                    <option value="">(select one)</option>
+                                    <option value="1">8 - 10</option>
+                                    <option value="2">10 - 12</option>
+                                    <option value="3">12 - 14</option>
+                                    <option value="4">14 - 16</option>
+                                    <option value="5">16 - 18</option>
+                                    <option value="6">18 - 20</option>
+                                    <option value="7">Förmiddag (8-13)</option>
+                                    <option value="8">Eftermiddag (13-20)</option>
+                                </select>
+                            </label>    
+                        </div>
+                    </section>
+                 </fieldset>
+                <fieldset>
+                    <h3>Personlig Information</h3>
+                    <label for="booker-name">Namn
+                        <input id="booker-name" name="booker-name" type="text" required />
+                    </label>
+                    <label for="email">Email
+                        <input id="email" name="email" type="email" required />
+                    </label>
+                    <label for="phone-number">Telefonnummer
+                        <input id="phone-number" name="phone-number" type="tel" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="add-info" class="large-label">Ytterligare Information
+                        <textarea id="add-info" name="add-info" rows="4" placeholder="t.ex. sällskapsstorlek för större grupper, om racket behöver lånas eller andra särskilda omständigheter"></textarea>
+                      </label>
+                </fieldset>
+                <input type="submit" id="submit" value="Boka"/>
+            </form>
+        </main>
+        <footer>
+            <h2>I am a footer please add stuff to me</h2>
+        </footer>
+        <!--Sidebar-->
+        <div class="sidenav">
+            <img src="tennis-player-with-racket.png" alt="Match icons created by Freepik - Flaticon">
+                <section class="sidenavlistwrapper">
+                <h2>Bokning</h2>
+                <ul class="sidenavlist">
+                    <li><a href="banor.html">Banor</a></li>
+                    <li class="sidebartitle">Omklädningsrum</li>
+                    <li class="inlineitem" style="width: 50%;"><a href="omkl.html?room=herr">Herr</a></li>
+                    <li class="inlineitem" style="width: 50%;"><a href="omkl.html?room=dam">Dam</a></li>
+                    <li class="afterinline"><a  href="bastu.html">Bastu</a></li>
+                </ul>
+                </section>
+            <section class="calendar">
+                <h3>Kalender</h3>
+                <p>Under konstruktion</p>
+            </section>
+        </div>
+
+    </body>
+</html>
