@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="styles-sidebar.css" />
+
+    <script>
+        function openNav(){
+            document.getElementById("sidenav").style.width = "15%";
+            let button = document.getElementById("sidenav-button");
+            button.style.right = "18%";
+            button.onclick = closeNav;
+        }
+        function closeNav(){
+            document.getElementById("sidenav").style.width = "0";
+            let button = document.getElementById("sidenav-button");
+            button.style.right = "5%";
+            button.onclick = openNav;
+        }
+    </script>
   </head>
   <body>
     <header id="clubTitle">
@@ -126,8 +141,9 @@
       </address>
     </footer>
 
+    <button onclick="openNav()" class="sidenav-button" id="sidenav-button">Open Sidebar</button>
     <!--Sidebar-->
-    <div class="sidenav">
+    <div class="sidenav slide-sidenav" id="sidenav">
       <img
         src="tennis-player-with-racket.png"
         alt="Match icons created by Freepik - Flaticon"

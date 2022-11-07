@@ -25,8 +25,23 @@
   overflow-x: hidden;
   background-color: var(--darkshade);
   color: var(--lightshade);
-  border-left: 1px solid var(--sidenavbordercolor);
 }
+
+/*
+Sliding Navbar
+*/
+.slide-sidenav{
+    width: 0;
+    transition: 0.5s;
+}
+
+.sidenav-button{
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    transition: 0.5s;
+}
+
 
 .sidenav img {
   width: 100px;
@@ -40,6 +55,7 @@
   width: 100%;
   border-top: 10px solid var(--sidenavbordercolor);
   border-bottom: 10px solid var(--sidenavbordercolor);
+  border-left: 1px solid var(--sidenavbordercolor);
 }
 
 .sidenavlist {
