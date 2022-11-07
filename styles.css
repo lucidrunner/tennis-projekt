@@ -1,250 +1,193 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600;800&display=swap");
 
-:root{
-    --maincolor:#E7A42B;
-    --lightaccent:#BCAEB7;
-    --lightshade:#F1EDEB;
-    --darkaccent:#977DA3;
-    --darkshade:#597A9E;
-    --bordercolor:#fff;
-    --sidenavbordercolor: #CF9427;
-    --divider-color: #597A9E;
+:root {
+  --maincolor: #e7a42b;
+  --lightaccent: #bcaeb7;
+  --lightshade: #f1edeb;
+  --darkaccent: #977da3;
+  --darkshade: #597a9e;
+  --bordercolor: #fff;
+  --sidenavbordercolor: #cf9427;
+  --divider-color: #597a9e;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--lightshade);
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--lightshade);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header{
-    font-family: 'Lobster', cursive;
-    font-size: 18pt;
-    height: 110px;
-    min-height: 110px;
-    background-color: var(--darkshade);
-    padding: 20px 20px 20px 5%;
+header {
+  font-size: 16pt;
+  height: 110px;
+  min-height: 110px;
+  background-color: var(--darkshade);
+  padding: 20px 20% 20px 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-header h1{
-    margin: auto;
+h1 {
+  color: var(--maincolor);
+  font-family: "Lobster", cursive;
 }
 
-.headerIndexLink{
-
-    color: var(--maincolor);
-    text-decoration: none;
+header h1 {
+  margin: auto;
 }
 
-.container{
-    margin: 0px 20% 0px 5%;
-    padding: 1em 1.5rem;
-    background-color: white;
-    flex:1;
+main h1 {
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
 }
 
-.index-container
-{
-    display:grid;
-    grid-template-columns: auto auto;
-    justify-content: left;
-
+.subtitle{
+  text-align: center;
 }
 
-.index-main{
+header p > a,
+main p > a {
+  text-decoration: none;
+  color: var(--maincolor);
+}
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
+header p > a {
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans;
+}
 
-    /* Nothing to do with the display:flex we're doing inside main, instead
+.headerIndexLink {
+  color: var(--maincolor);
+  text-decoration: none;
+}
+
+.container {
+  margin: 0px 20% 0px 5%;
+  background-color: white;
+  flex: 1;
+}
+
+.padded-container {
+  padding: 1em 1.5rem;
+}
+
+.banner-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.index-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: left;
+}
+
+.index-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+
+  /* Nothing to do with the display:flex we're doing inside main, instead
     this is about forcing the header to stay at the bottom  */
-    flex:1;
+  flex: 1;
 }
 
-.info-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0 5px;
-    margin: 0 10px;
-    border-bottom: 2px solid var(--divider-color);
+.info-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin: 0 10px;
+  border-bottom: 2px solid var(--divider-color);
 }
 
-.index-article{
-    flex-grow: 1;
-    flex-basis: 25vw;
+.index-article {
+  flex-grow: 1;
+  flex-basis: 25vw;
 }
 
-#events{
-    height: fit-content;
-    text-align: center;
-
-    color: var(--darkaccent);
+#side-column {
+  height: fit-content;
+  text-align: center;
+  max-width: 15vw;
+}
+#side-column h2 {
+  color: var(--darkaccent);
 }
 
-.info-block a, .link-text{
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--darkaccent);    
+#news article {
+  border-top: 2px dashed var(--divider-color);
+}
+#news h3 {
+  font-size: small;
+  font-weight: 600;
+  color: var(--darkshade);
+}
+#news p {
+  font-size: small;
+  text-align: left;
 }
 
-.info-block  a:hover{
-    
-    color: var(--maincolor);    
+.info-block a,
+.link-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--darkaccent);
 }
 
-.index-article h2 + p::first-letter
-{
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--darkaccent);    
+.info-block a:hover {
+  color: var(--maincolor);
 }
 
-h2{
-    font-family:'Lobster', cursive;
+.index-article h2 + p::first-letter {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--darkaccent);
 }
 
-.info-block h2{
-    color: var(--darkaccent);
-    border-top: 2px solid var(--divider-color);
-    padding-top: 10px;
+h2 {
+  font-family: "Lobster", cursive;
 }
 
-footer{
-    background-color: #597A9E;
-    text-align: center;
-    padding: 20px;
-    min-height: 100px;
-    color:var(--lightshade);
-    /* text-align != middle since we have our sidebar atm */
-    transform: translate(-7.5%, 0%);
+.info-block h2 {
+  color: var(--darkaccent);
+  border-top: 2px solid var(--divider-color);
+  padding-top: 10px;
 }
 
-
-/*
- SIDEBAR STUFF BELOW
-*/
-
-.sidenav h2{
-    background-color: var(--maincolor);
-    color: var(--darkshade);
-    width: 100%;
-    padding: 0.4em 0;
-    margin: 0 0 0 0;
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background-color: #597a9e;
+  width: 85%;
+  padding: 20px;
+  min-height: 100px;
 }
 
-
-.sidenav{
-    height: 100%;
-    width: 15%;
-    display:flex;
-    align-items:center;
-    justify-content: flex-start;
-    position: fixed;
-    flex-direction: column;
-    text-align: center;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    background-color: var(--darkshade);
-    color: var(--lightshade)
+footer,
+footer a {
+  color: var(--lightshade);
 }
 
-.sidenav img{
-    width: 100px;
-    height: 100px;
-    margin: 10px 0 0 0;
-    filter: invert(83%) sepia(17%) saturate(5581%) hue-rotate(342deg) brightness(98%) contrast(85%);
+footer h2 {
+  color: var(--maincolor);
+  font-size: 2em;
 }
 
-.sidenavlistwrapper{
-    width: 100%;
-    border-top: 10px solid var(--sidenavbordercolor);
-    border-bottom: 10px solid var(--sidenavbordercolor);
-    border-left:  1px solid var(--sidenavbordercolor);
-}
-
-.sidenavlist{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-.sidenavlist a, .sidebartitle{
-    display:block;
-    width: auto;
-    padding: 0.7em 0.7em;
-    text-decoration: none;
-}
-
-.sidenavlist a{
-    background-color: var(--lightshade);
-    color: var(--maincolor);
-    border-top: 1px solid #D9D6D4;
-    border-bottom: 1px solid #FFFCFA;
-}
-
-.sidenavlist a:hover{
-    background-color: var(--darkaccent);
-    color: var(--lightshade);
-    border-top: 1px solid #806A8A;
-    border-bottom: 1px solid #DEB9F0;
-}
-
-
-.inlineitem a{
-    border-left: 1px solid #D9D6D4;
-    border-right: 1px solid #FFFCFA;
-}
-
-.inlineitem a:hover{
-    border-left: 1px solid #806A8A;
-    border-right: 1px solid #DEB9F0;
-}
-
-.sidenavlist .sidebartitle{
-    color: var(--darkshade);
-    font-weight: 800;
-}
-
-.sidenavlist a::first-letter
-{
-    font-size: 1.1em;
-}
-
-
-.sidebartitle{
-    background-color: var(--maincolor);
-    font-size: 0.9em;
-    color: var(--lightshade);
-    border-top: 2px solid var(--sidenavbordercolor);
-}
-
-.inlineitem
-{
-    width: auto;
-    float:left;
-    overflow:hidden;
-}
-
-.afterinline{
-    clear:left;
-}
-
-.calendar
-{
-    margin-top: 50px;
+address {
+  text-align: center;
 }
