@@ -2,6 +2,7 @@
  SIDEBAR STUFF BELOW
 */
 
+
 .sidenav h2 {
   background-color: var(--maincolor);
   color: var(--darkshade);
@@ -37,9 +38,20 @@ Sliding Navbar
 
 .sidenav-button{
     position: fixed;
-    right: 50px;
+    right: 3px;
     top: 50%;
+    font-size: 42pt;
     transition: 0.5s;
+    display: block;
+    border: 0;
+    color: var(--maincolor);
+    text-shadow: 1px 1px 2px black;
+    /* -webkit-text-stroke: #806a8a 1px; */
+}
+
+.sidenav-button:hover{
+  cursor: pointer;
+  color: var(--sidenavbordercolor)
 }
 
 

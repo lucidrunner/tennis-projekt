@@ -21,8 +21,13 @@
         }
       };
     </script>
+    
+    <script src="sidebar.js" ></script>
   </head>
   <body>
+
+    <!--&nbsp om man behöver empty content-->
+
     <header id="clubTitle">
       <a href="index.html" class="headerIndexLink"
         ><h1>Skänninge Tennisförening</h1></a
@@ -50,7 +55,7 @@
 
       <section class="padded-container">
         <h2 id="booking">Boka Omklädningsrum</h2>
-        <form>
+        <form action="">
           <fieldset>
             <h3>Rum</h3>
             <section class="room">
@@ -145,8 +150,11 @@
         Sverige <br />
       </address>
     </footer>
+
+    
+    <span onclick="openNav()" class="sidenav-button" id="sidenav-button">◄</span>
     <!--Sidebar-->
-    <div class="sidenav">
+    <div class="sidenav slide-sidenav" id="sidenav">
       <img
         src="tennis-player-with-racket.png"
         alt="Match icons created by Freepik - Flaticon"

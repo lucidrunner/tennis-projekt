@@ -6,27 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="styles-sidebar.css" />
-
-    <script>
-        function openNav(){
-            document.getElementById("sidenav").style.width = "15%";
-            let button = document.getElementById("sidenav-button");
-            button.style.right = "18%";
-            button.onclick = closeNav;
-        }
-        function closeNav(){
-            document.getElementById("sidenav").style.width = "0";
-            let button = document.getElementById("sidenav-button");
-            button.style.right = "5%";
-            button.onclick = openNav;
-        }
-    </script>
+  
+    <script src="sidebar.js" ></script>
   </head>
   <body>
-    <header id="clubTitle">
+    <header id="clubTitle" class="header-index-link">
       <a href="index.html" class="headerIndexLink"
         ><h1>Skänninge Tennisförening</h1></a
       >
+      <!--Borde nog inte vara <p> utan typ span?-->
       <p><a href="index.html">Om STF</a></p>
       <p><a href="banor.html">Banor</a></p>
       <p><a href="omkl.html">Omklädningsrum</a></p>
@@ -34,6 +22,7 @@
       <p><a href="">Våra Sponsorer</a></p>
     </header>
 
+  
     <article class="index-container container padded-container">
       <main class="index-main">
         <article id="about" class="info-block index-article">
@@ -131,8 +120,9 @@
         </article>
       </section>
     </article>
+
     <footer>
-      <h2>STF</h2>
+      <p id="footer-logo">STF<p>
       <address>
         Skänninge Tennisförening <br />
         Villa Villekulla 123<br />
@@ -141,7 +131,7 @@
       </address>
     </footer>
 
-    <button onclick="openNav()" class="sidenav-button" id="sidenav-button">Open Sidebar</button>
+    <span onclick="openNav()" class="sidenav-button" id="sidenav-button">◄</span>
     <!--Sidebar-->
     <div class="sidenav slide-sidenav" id="sidenav">
       <img
@@ -151,15 +141,15 @@
       <section class="sidenavlistwrapper">
         <h2>Bokning</h2>
         <ul class="sidenavlist">
-          <li><a href="banor.html">Banor</a></li>
+          <li><a href="banor.html#booking">Banor</a></li>
           <li class="sidebartitle">Omklädningsrum</li>
           <li class="inlineitem" style="width: 50%">
-            <a href="omkl.html?room=herr">Herr</a>
+            <a href="omkl.html?room=herr#booking">Herr</a>
           </li>
           <li class="inlineitem" style="width: 50%">
-            <a href="omkl.html?room=dam">Dam</a>
+            <a href="omkl.html?room=dam#booking">Dam</a>
           </li>
-          <li class="afterinline"><a href="bastu.html">Bastu</a></li>
+          <li class="afterinline"><a href="bastu.html#booking">Bastu</a></li>
         </ul>
       </section>
       <section class="calendar">

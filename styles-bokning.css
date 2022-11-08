@@ -24,6 +24,7 @@
 
 form {
   border: 2px solid var(--divider-color);
+  border-radius: 10px;
 }
 
 fieldset {
@@ -82,11 +83,16 @@ input[type="date"] {
   display: block;
   margin: 1em auto;
   padding: 10px;
-  background-color: var(--lightshade);
-  color: var(--maincolor);
+  background-color: var(--darkshade);
+  color: white;
   font-family: "Open-sans", sans-serif;
   font-size: 1em;
-  width: 35%;
+  width: 20%;
+  border-radius: 10px;
+}
+
+#submit:hover{
+   background-color: var(--darkaccent);
 }
 
 #submit::first-letter {
