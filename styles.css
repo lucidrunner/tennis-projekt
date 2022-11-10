@@ -9,6 +9,7 @@
   --bordercolor: #fff;
   --sidenavbordercolor: #cf9427;
   --divider-color: #597a9e;
+  --header-size: 110px;
 }
 
 * {
@@ -26,14 +27,30 @@ body {
 }
 
 header {
-  font-size: 16pt;
-  height: 110px;
-  min-height: 110px;
+  height: var(--header-size);
+  width: 100%;
   background-color: var(--darkshade);
   padding: 1.5% 12.5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  position: fixed;  
+}
+
+main{
+    margin-top: var(--header-size);
+}
+
+@keyframes color-blink{
+  0% {color: var(--maincolor);}
+  50% {color: greenyellow;}
+  100%{color: var(--maincolor);}
+}
+
+@keyframes color-change{
+  0% {color: var(--maincolor);}
+  100%{color: greenyellow;}
 }
 
 h1 {
@@ -41,14 +58,21 @@ h1 {
   font-family: "Lobster", cursive;
 }
 
+h1:hover{
+  animation: color-change 1s ease-out;
+  animation-iteration-count: 1;
+}
+
 header h1 {
+  font-size: 2.5rem;
   margin: auto;
+  padding: auto;
+  transform: translateY(-10px);
   /*Text shadows woo*/
   text-shadow: #bb8829 4px 4px, #9b732a 8px 8px, #86662a 12px 12px;
 }
 
 main h1 {
-  margin: auto;
   font-size: 2rem;
   text-align: center;
 }
@@ -57,19 +81,61 @@ main h1 {
   text-align: center;
 }
 
-header p > a,
+nav a,
 main p > a {
   text-decoration: none;
   color: var(--maincolor);
 }
 
-header p > a {
-  font-size: 1.2rem;
+nav{
+  margin: auto;
+  margin-right: 0px;
+  padding: auto;
+  text-align: center;
+  vertical-align: center;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-size: 1.3em;
+  font-weight: bold;
   font-family: "Open Sans", sans;
 }
-header p > a:hover{
-  color: var(--sidenavbordercolor);
-  border-bottom: #86662a 1px;
+
+nav a:hover{
+  transition: 2s;
+  color: greenyellow;
+
+  
+  /* animation: color-change 2s infinite; */
+}
+
+.hover-underline-animation{
+  display: inline-block;
+  position:relative;
+}
+
+.hover-underline-animation::after{
+  content:'';
+  position:absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: var(--sidenavbordercolor);
+  transform-origin: bottom right;
+  transition: transform 0.33s ease-out;
+}
+
+.hover-underline-animation:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .headerIndexLink {
@@ -78,7 +144,8 @@ header p > a:hover{
 }
 
 .container {
-  margin: 0 12.5%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
   background-color: white;
   flex: 1;
 }
@@ -95,6 +162,7 @@ header p > a:hover{
 }
 
 .index-container {
+  margin-top: var(--header-size);
   display: grid;
   grid-template-columns: auto auto;
   justify-content: left;
