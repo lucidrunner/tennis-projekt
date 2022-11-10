@@ -68,6 +68,15 @@ input[type="date"] {
   flex-wrap: wrap;
 }
 
+@media (max-width: 750px)
+{
+  .courts,
+  .time,
+  .room {
+  flex-direction: column;
+}
+}
+
 .flex-row {
   flex-basis: 20%;
   margin: 0 10px 0 0;

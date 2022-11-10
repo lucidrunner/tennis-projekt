@@ -63,6 +63,13 @@ Sliding Navbar
     brightness(98%) contrast(85%);
 }
 
+@media (max-width: 780px)
+{
+  .sidenav img{
+    margin-top: 50px;
+  }
+}
+
 .sidenavlistwrapper {
   width: 100%;
   border-top: 10px solid var(--sidenavbordercolor);

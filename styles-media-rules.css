@@ -2,7 +2,9 @@
 /* Ugly hack to get imports working from another file
 Without the !important they'd get overwritten by the styles.css
 after import 
+This is 100% probably not how you're supposed to do this :D
 */
+
 @media (max-width: 1200px)
 {
   nav ul{
@@ -13,20 +15,20 @@ after import
   }
 }
 
-@media (max-width: 900px)
+@media (max-width: 780px)
 {
   :root{
     --header-size: 150px !important;
     --header-nav-anim-bottom: 0px !important;
   }
 
-  h1{
-    font-size: 1.5rem !important;
-  }
-
   nav ul{
     flex-direction: column !important;
     gap: 0 !important;
+  }
+
+  h1{
+    font-size: 1.5rem !important;
   }
 
   nav{
@@ -37,6 +39,18 @@ after import
   nav a{
     font-size: 0.8rem !important;
   }
+
+  .index-main{
+    flex-direction: column;
+  }
+  
+  .index-container {
+    grid-template-columns: 1fr !important;
+  }
+  #side-column{
+    max-width: max-content !important;
+  }
+
 }
 
 @media (max-width: 550px)
@@ -46,9 +60,6 @@ after import
     position: absolute !important;
   }
 
-  h1{
-    font-size: 1.1rem !important;
-  }
 }
 
 @media (max-width: 360px)
