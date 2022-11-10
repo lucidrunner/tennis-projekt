@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600;800&display=swap");
+@import url("styles-media-rules.css");
+@import "styles-sidebar.css";
 
 :root {
   --maincolor: #e7a42b;
@@ -10,6 +12,7 @@
   --sidenavbordercolor: #cf9427;
   --divider-color: #597a9e;
   --header-size: 110px;
+  --header-nav-anim-bottom: -10px;
 }
 
 * {
@@ -55,21 +58,12 @@ main{
 
 h1 {
   color: var(--maincolor);
-  font-family: "Lobster", cursive;
-}
-
-h1:hover{
-  animation: color-change 1s ease-out;
-  animation-iteration-count: 1;
-}
-
-header h1 {
+  font-family: "Lobster", cursive;  
   font-size: 2.5rem;
-  margin: auto;
-  padding: auto;
   transform: translateY(-10px);
   /*Text shadows woo*/
   text-shadow: #bb8829 4px 4px, #9b732a 8px 8px, #86662a 12px 12px;
+
 }
 
 main h1 {
@@ -88,30 +82,29 @@ main p > a {
 }
 
 nav{
-  margin: auto;
-  margin-right: 0px;
-  padding: auto;
-  text-align: center;
-  vertical-align: center;
+  text-align: right;
+  max-height: 140px;
 }
 
 nav ul{
   display: flex;
+  gap: 1.2rem;
+  flex-wrap: nowrap;
   flex-direction: row;
-  gap: 1.5rem;
 }
 
 nav a {
-  font-size: 1.3em;
+  font-size: 1.2rem;
   font-weight: bold;
+  white-space: nowrap;
   font-family: "Open Sans", sans;
 }
 
-nav a:hover{
-  transition: 2s;
-  color: greenyellow;
 
-  
+
+nav a:hover{
+  transition: 0.3s;
+  color: var(--sidenavbordercolor);
   /* animation: color-change 2s infinite; */
 }
 
@@ -126,7 +119,7 @@ nav a:hover{
   width: 100%;
   transform: scaleX(0);
   height: 2px;
-  bottom: -10px;
+  bottom: var(--header-nav-anim-bottom);
   left: 0;
   background-color: var(--sidenavbordercolor);
   transform-origin: bottom right;
