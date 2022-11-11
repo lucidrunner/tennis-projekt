@@ -68,13 +68,12 @@ input[type="date"] {
   flex-wrap: wrap;
 }
 
-@media (max-width: 750px)
-{
+@media (max-width: 750px) {
   .courts,
   .time,
   .room {
-  flex-direction: column;
-}
+    flex-direction: column;
+  }
 }
 
 .flex-row {
@@ -100,8 +99,8 @@ input[type="date"] {
   border-radius: 10px;
 }
 
-#submit:hover{
-   background-color: var(--darkaccent);
+#submit:hover {
+  background-color: var(--darkaccent);
 }
 
 #submit::first-letter {

@@ -2,7 +2,6 @@
  SIDEBAR STUFF BELOW
 */
 
-
 .sidenav h2 {
   background-color: var(--maincolor);
   color: var(--darkshade);
@@ -31,29 +30,28 @@
 /*
 Sliding Navbar
 */
-.slide-sidenav{
-    width: 0;
-    transition: 0.5s;
+.slide-sidenav {
+  width: 0;
+  transition: 0.5s;
 }
 
-.sidenav-button{
-    position: fixed;
-    right: 3px;
-    top: 50%;
-    font-size: 42pt;
-    transition: 0.5s;
-    display: block;
-    border: 0;
-    color: var(--maincolor);
-    text-shadow: 1px 1px 2px black;
-    /* -webkit-text-stroke: #806a8a 1px; */
+.sidenav-button {
+  position: fixed;
+  right: 3px;
+  top: 50%;
+  font-size: 42pt;
+  transition: 0.5s;
+  display: block;
+  border: 0;
+  color: var(--maincolor);
+  text-shadow: 1px 1px 2px black;
+  /* -webkit-text-stroke: #806a8a 1px; */
 }
 
-.sidenav-button:hover{
+.sidenav-button:hover {
   cursor: pointer;
-  color: var(--sidenavbordercolor)
+  color: var(--sidenavbordercolor);
 }
-
 
 .sidenav img {
   width: 100px;
@@ -61,11 +59,13 @@ Sliding Navbar
   margin: 10px 0 0 0;
   filter: invert(83%) sepia(17%) saturate(5581%) hue-rotate(342deg)
     brightness(98%) contrast(85%);
+    
+  transition: var(--resize-transition-time);
+  transition-property: margin-top;
 }
 
-@media (max-width: 780px)
-{
-  .sidenav img{
+@media (max-width: 780px) {
+  .sidenav img {
     margin-top: 50px;
   }
 }
