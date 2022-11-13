@@ -67,7 +67,7 @@ h1{
 }
 
 .logo{
-  font-size: 2.3rem;
+  font-size: clamp(1.5rem, 1vw + 1.3rem, 3rem);
   transform: translateY(-10px);
   text-shadow: #bb8829 4px 4px, #9b732a 8px 8px, #86662a 12px 12px;
   font-style: italic;
@@ -335,7 +335,7 @@ address {
 
 @media (max-width: 550px) {
   header {
-    position: absolute;
+    position: inherit;
   }
 }
 
@@ -343,16 +343,16 @@ address {
 
   header{
     flex-direction: column;
+    text-align: center;
     padding-top: 2vh;
-  }
-
-  .logo {
-    font-size: 1.5rem;
+    padding-inline: 0.5rem;
   }
 
   nav ul{
     flex-direction: row;
     gap: 0.2rem 1rem; 
+    justify-content: center;
+    padding-inline: 0.5rem;
   }
 
 }

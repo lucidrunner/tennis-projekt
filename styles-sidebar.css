@@ -31,7 +31,6 @@
 Sliding Navbar
 */
 .slide-sidenav {
-  width: 0;
   transition: 0.5s;
 }
 
