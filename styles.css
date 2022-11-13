@@ -14,14 +14,18 @@
   --header-size: 110px;
   --header-nav-anim-bottom: -10px;
   --resize-transition-time: 0.8s;
+  
 }
 
-* {
+*,
+*::before,
+x::after {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
   background-color: var(--lightshade);
   margin: 0;
   padding: 0;
@@ -31,72 +35,56 @@ body {
 }
 
 header {
-  height: var(--header-size);
+  min-height: var(--header-size);
   width: 100%;
   background-color: var(--darkshade);
-  padding: 1.5% 12.5%;
+  padding: 0 12.5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
+  top: 0;
   transition: var(--resize-transition-time);
   transition-property: height, padding;
 }
 
-main {
-  margin-top: var(--header-size);
-}
-
-@keyframes color-blink {
-  0% {
-    color: var(--maincolor);
-  }
-  50% {
-    color: greenyellow;
-  }
-  100% {
-    color: var(--maincolor);
-  }
-}
-
-@keyframes color-change {
-  0% {
-    color: var(--maincolor);
-  }
-  100% {
-    color: greenyellow;
-  }
-}
-
-h1 {
-  color: var(--maincolor);
+.logo, h1, h2{
   font-family: "Lobster", cursive;
+  color: var(--maincolor);
+}
+
+h3, h4{
+  color: var(--darkshade);
+}
+
+h1{
+  font-size: 2rem;
+}
+
+.centered{
+  text-align: center;
+}
+
+.logo{
   font-size: 2.3rem;
   transform: translateY(-10px);
-  font-style: italic;
-  /*Text shadows woo*/
   text-shadow: #bb8829 4px 4px, #9b732a 8px 8px, #86662a 12px 12px;
+  font-style: italic;
+  white-space: nowrap;
 }
 
-main h1 {
-  font-size: 2rem;
-  text-align: center;
-}
-
-.subtitle {
-  text-align: center;
-}
-
-nav a,
-main p > a {
-  text-decoration: none;
+* a{
   color: var(--maincolor);
+  text-decoration: none;
+}
+
+main a:hover{
+  color: var(--darkaccent);
 }
 
 nav {
   text-align: right;
-  max-height: 140px;
 }
 
 nav ul {
@@ -104,12 +92,8 @@ nav ul {
   justify-content: flex-end;
   align-items: flex-end;
   gap: 1.2rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
-}
-
-nav li{
-  max-width: max-content;
 }
 
 nav a {
@@ -148,18 +132,15 @@ nav a:hover {
   transform-origin: bottom left;
 }
 
-.headerIndexLink {
-  color: var(--maincolor);
-  text-decoration: none;
-}
+/* MAIN CONTAINERS */
 
 .container {
   margin-left: 12.5%;
   margin-right: 12.5%;
-  background-color: white;
   flex: 1;
   transition: var(--resize-transition-time);
   transition-property: margin;
+  background-color: white;
 }
 
 .padded-container {
@@ -174,31 +155,55 @@ nav a:hover {
 }
 
 .index-container {
-  margin-top: var(--header-size);
   display: grid;
-  gap: 15px 5px;
+  gap: 15px;
   grid-template-columns: auto auto;
   justify-content: space-between;
 }
 
-.index-main {
+.index-articles {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px 5px;
+  gap: 15px;
   justify-content: center;
   margin: 0;
-  
-
-  /* Nothing to do with the display:flex we're doing inside main, instead
-    this is about forcing the header to stay at the bottom  */
 }
+
+/* ARTICLES */
 
 .info-block {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  margin: 0 10px;
+  padding: 0 5px;
+}
+
+
+.info-block a:hover {
+  color: var(--maincolor);
+}
+
+.info-block h2 {
+  color: var(--darkaccent);
+  margin-top: 8px;
+}
+
+
+.info-block a,
+.link-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--darkaccent);
+}
+
+.index-article h2 + p:first-letter {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--darkaccent);
+}
+
+.bordered{
   border-top: 2px solid var(--divider-color);
   border-bottom: 2px solid var(--divider-color);
 }
@@ -208,58 +213,34 @@ nav a:hover {
   flex-basis: 25vw;
 }
 
-#side-column {
+.side-column {
   height: fit-content;
   text-align: center;
   max-width: 15vw;
 }
 
-#side-column .info-block:not(:first-of-type){
+.side-column .bordered:not(:first-of-type){
   border-top: 0;
 }
 
-#side-column h2 {
-  color: var(--darkaccent);
-}
-
-#news article {
+.side-column-article {
   border-top: 2px dashed var(--divider-color);
 }
 
-#news h3 {
+.side-column-article h3 {
   font-size: small;
   font-weight: 600;
-  color: var(--darkshade);
 }
-#news p {
+
+.side-column-article p {
   font-size: small;
   text-align: left;
+  padding-left: 2%;
+  padding-right: 2%
 }
 
-.info-block a,
-.link-text {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--darkaccent);
-}
 
-.info-block a:hover {
-  color: var(--maincolor);
-}
-
-.index-article h2 + p::first-letter {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--darkaccent);
-}
-
-h2 {
-  font-family: "Lobster", cursive;
-}
-
-.info-block h2 {
-  color: var(--darkaccent);
-}
+/*     FOOTER    */
 
 footer {
   display: flex;
@@ -286,4 +267,125 @@ footer a {
 address {
   text-align: center;
   flex-basis: 25%;
+}
+
+/*    MEDIA RULES    */
+
+@media (max-width: 1200px) {
+
+  .logo{
+    white-space: normal;
+  }
+
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 780px) {
+  :root {
+    --header-nav-anim-bottom: 0px;
+  }
+
+  header{
+    padding: 1.5% 2rem;
+  }
+
+  .container{
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    vertical-align: top;
+    margin-top: 0;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+
+  .index-articles {
+    flex-direction: column ;
+  }
+  .index-container {
+    grid-template-columns: 1fr;
+  }
+
+  .side-column {
+    max-width: 100%;
+  }
+  .side-column .info-block{
+    padding: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    position: absolute;
+  }
+}
+
+@media (max-width: 425px) {
+
+  header{
+    flex-direction: column;
+    padding-top: 2vh;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  nav ul{
+    flex-direction: row;
+    gap: 0.2rem 1rem; 
+  }
+
+}
+
+
+/* Figure out how to calculate aspect ratio for portrait mode
+@media screen and (aspect-ratio:2/1){
+  header{
+    position: absolute;
+  }
+} */
+
+
+/*   ANIMATIONS  */
+
+
+@keyframes color-blink {
+  0% {
+    color: var(--maincolor);
+  }
+  50% {
+    color: greenyellow;
+  }
+  100% {
+    color: var(--maincolor);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: var(--maincolor);
+  }
+  100% {
+    color: greenyellow;
+  }
 }

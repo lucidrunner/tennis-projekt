@@ -10,9 +10,8 @@
   </head>
   <body>
     <header id="clubTitle" class="header-index-link">
-      <a href="index.html" class="headerIndexLink"
-        ><h1>Skänninge Tennisförening</h1></a
-      >
+      <a href="index.html" class="logo">
+        Skänninge Tennisförening</a>
       <nav>
         <ul>
           <li class="hover-underline-animation">
@@ -34,9 +33,9 @@
       </nav>
     </header>
 
-    <article class="index-container container padded-container">
-      <main class="index-main">
-        <article id="about" class="info-block index-article">
+    <main class="container index-container padded-container">
+      <section class="index-articles">
+        <article id="about" class="info-block index-article bordered">
           <article>
             <h2>Om Klubben</h2>
             <p>
@@ -56,7 +55,7 @@
           </article>
         </article>
 
-        <article id="courts" class="info-block index-article">
+        <article id="courts" class="info-block index-article bordered">
           <article>
             <h2>Våra Banor</h2>
             <p>
@@ -74,7 +73,7 @@
           <p><a href="banor.html#booking">Boka Banor</a></p>
         </article>
 
-        <article id="equipment" class="info-block index-article">
+        <article id="equipment" class="info-block index-article bordered">
           <article>
             <h2>Våra Lokaler</h2>
             <p>
@@ -105,9 +104,10 @@
             <p><a href="bastu.html#booking">Boka Bastu</a></p>
           </div>
         </article>
-      </main>
-      <section id="side-column">
-        <article id="events" class="info-block">
+      </section>
+
+      <section class="side-column">
+        <article id="events" class="info-block bordered">
           <article>
             <h2>Events</h2>
             <p>8/11 - Föreläsning</p>
@@ -115,15 +115,15 @@
             <p>Fredag v. 45 - After Work</p>
           </article>
         </article>
-        <article id="news" class="info-block">
+        <article id="news" class="info-block bordered">
           <h2>Nyheter</h2>
-          <article>
+          <article class="side-column-article">
             <h3>Klubben öppnar för säsongen!</h3>
             <p>
               Den 20e mars öppnar vi återigen portarna. Yadda yadda etc etc.
             </p>
           </article>
-          <article>
+          <article class="side-column-article">
             <h3>Klubben stänger för säsongen!</h3>
             <p>
               Efter en lång säsong stänger vi återigen portarna idag, den 21
@@ -132,7 +132,8 @@
           </article>
         </article>
       </section>
-    </article>
+    
+  </main>
 
     <footer>
       <p id="footer-logo">STF</p>

@@ -50,6 +50,7 @@ select {
   margin: 5px 0 10px 0;
   width: 100%;
   min-height: 2em;
+  accent-color: var(--darkaccent);
 }
 
 input[type="date"] {
