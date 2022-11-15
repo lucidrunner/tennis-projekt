@@ -12,7 +12,7 @@
   --divider-color: #597a9e;
   --header-size: 110px;
   --header-nav-anim-bottom: -10px;
-  --resize-transition-time: 0.8s;
+  --resize-transition-time: 0.4s;
 }
 
 *,
@@ -210,6 +210,7 @@ nav a:hover {
 .index-article {
   flex-grow: 1;
   flex-basis: 25vw;
+  
 }
 
 .side-column {
@@ -336,19 +337,31 @@ address {
 }
 
 @media (max-width: 425px) {
+  :root {
+    --header-nav-anim-bottom: -10px;
+  }
+
   header {
     flex-direction: column;
+    align-items: stretch;
     text-align: center;
     padding-top: 2vh;
     padding-inline: 0.5rem;
   }
 
-  nav ul {
-    flex-direction: row;
-    gap: 0.2rem 1rem;
-    justify-content: center;
-    padding-inline: 0.5rem;
+  nav{
+    text-align: center;
+    
   }
+  
+
+  nav ul {
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.2rem 1rem;
+  }
+
 }
 
 /* Figure out how to calculate aspect ratio for portrait mode
