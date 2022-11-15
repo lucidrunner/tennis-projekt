@@ -73,6 +73,10 @@ h1 {
   text-shadow: #bb8829 4px 4px, #9b732a 8px 8px, #86662a 12px 12px;
   font-style: italic;
   white-space: nowrap;
+  padding-left: 7px;
+  text-indent: -7px;
+  line-height: 1.08;
+
 }
 
 * a {
