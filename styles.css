@@ -14,7 +14,6 @@
   --header-size: 110px;
   --header-nav-anim-bottom: -10px;
   --resize-transition-time: 0.8s;
-  
 }
 
 *,
@@ -49,24 +48,27 @@ header {
   transition-property: height, padding;
 }
 
-.logo, h1, h2{
+.logo,
+h1,
+h2 {
   font-family: "Lobster", cursive;
   color: var(--maincolor);
 }
 
-h3, h4{
+h3,
+h4 {
   color: var(--darkshade);
 }
 
-h1{
+h1 {
   font-size: 2rem;
 }
 
-.centered{
+.centered {
   text-align: center;
 }
 
-.logo{
+.logo {
   font-size: clamp(1.5rem, 1vw + 1.3rem, 3rem);
   transform: translateY(-10px);
   text-shadow: #bb8829 4px 4px, #9b732a 8px 8px, #86662a 12px 12px;
@@ -74,12 +76,12 @@ h1{
   white-space: nowrap;
 }
 
-* a{
+* a {
   color: var(--maincolor);
   text-decoration: none;
 }
 
-main a:hover{
+main a:hover {
   color: var(--darkaccent);
 }
 
@@ -179,7 +181,6 @@ nav a:hover {
   padding: 0 5px;
 }
 
-
 .info-block a:hover {
   color: var(--maincolor);
 }
@@ -188,7 +189,6 @@ nav a:hover {
   color: var(--darkaccent);
   margin-top: 8px;
 }
-
 
 .info-block a,
 .link-text {
@@ -203,7 +203,7 @@ nav a:hover {
   color: var(--darkaccent);
 }
 
-.bordered{
+.bordered {
   border-top: 2px solid var(--divider-color);
   border-bottom: 2px solid var(--divider-color);
 }
@@ -219,7 +219,7 @@ nav a:hover {
   max-width: 15vw;
 }
 
-.side-column .bordered:not(:first-of-type){
+.side-column .bordered:not(:first-of-type) {
   border-top: 0;
 }
 
@@ -236,9 +236,8 @@ nav a:hover {
   font-size: small;
   text-align: left;
   padding-left: 2%;
-  padding-right: 2%
+  padding-right: 2%;
 }
-
 
 /*     FOOTER    */
 
@@ -272,11 +271,9 @@ address {
 /*    MEDIA RULES    */
 
 @media (max-width: 1200px) {
-
-  .logo{
+  .logo {
     white-space: normal;
   }
-
 
   nav ul {
     flex-wrap: wrap;
@@ -291,11 +288,11 @@ address {
     --header-nav-anim-bottom: 0px;
   }
 
-  header{
+  header {
     padding: 1.5% 2rem;
   }
 
-  .container{
+  .container {
     margin-right: 0;
     margin-left: 0;
   }
@@ -319,7 +316,7 @@ address {
   }
 
   .index-articles {
-    flex-direction: column ;
+    flex-direction: column;
   }
   .index-container {
     grid-template-columns: 1fr;
@@ -328,7 +325,7 @@ address {
   .side-column {
     max-width: 100%;
   }
-  .side-column .info-block{
+  .side-column .info-block {
     padding: 0;
   }
 }
@@ -340,23 +337,20 @@ address {
 }
 
 @media (max-width: 425px) {
-
-  header{
+  header {
     flex-direction: column;
     text-align: center;
     padding-top: 2vh;
     padding-inline: 0.5rem;
   }
 
-  nav ul{
+  nav ul {
     flex-direction: row;
-    gap: 0.2rem 1rem; 
+    gap: 0.2rem 1rem;
     justify-content: center;
     padding-inline: 0.5rem;
   }
-
 }
-
 
 /* Figure out how to calculate aspect ratio for portrait mode
 @media screen and (aspect-ratio:2/1){
@@ -365,9 +359,7 @@ address {
   }
 } */
 
-
 /*   ANIMATIONS  */
-
 
 @keyframes color-blink {
   0% {
