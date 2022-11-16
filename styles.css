@@ -200,7 +200,7 @@ nav a:hover {
   color: var(--darkaccent);
 }
 
-.index-article h2 + p:first-letter {
+.index-article h2+p:first-letter {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--darkaccent);
@@ -214,7 +214,7 @@ nav a:hover {
 .index-article {
   flex-grow: 1;
   flex-basis: 25vw;
-  
+
 }
 
 .side-column {
@@ -282,6 +282,7 @@ address {
   nav ul {
     flex-wrap: wrap;
   }
+
   nav a {
     font-size: 1rem;
   }
@@ -322,6 +323,7 @@ address {
   .index-articles {
     flex-direction: column;
   }
+
   .index-container {
     grid-template-columns: 1fr;
   }
@@ -329,6 +331,7 @@ address {
   .side-column {
     max-width: 100%;
   }
+
   .side-column .info-block {
     padding: 0;
   }
@@ -352,11 +355,11 @@ address {
     padding-inline: 0.5rem;
   }
 
-  nav{
+  nav {
     text-align: center;
-    
+
   }
-  
+
 
   nav ul {
     display: grid;
@@ -380,9 +383,11 @@ address {
   0% {
     color: var(--maincolor);
   }
+
   50% {
     color: greenyellow;
   }
+
   100% {
     color: var(--maincolor);
   }
@@ -392,6 +397,7 @@ address {
   0% {
     color: var(--maincolor);
   }
+
   100% {
     color: greenyellow;
   }
