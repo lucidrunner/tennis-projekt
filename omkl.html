@@ -1,164 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>STF - Omklädningsrum</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles-bokning.css" />
 
-<head>
-  <title>STF - Omklädningsrum</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="styles-bokning.css" />
+    <script type="text/javascript">
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const roomChoice = urlParams.get("room");
+      window.onload = function () {
+        if (roomChoice == "dam") {
+          document.getElementById("dam").checked = true;
+        }
+      };
+    </script>
 
-  <script type="text/javascript">
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const roomChoice = urlParams.get("room");
-    window.onload = function () {
-      if (roomChoice == "dam") {
-        document.getElementById("dam").checked = true;
-      }
-    };
-  </script>
+    <script src="jquery-3.6.1.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="header-nav.js"></script>
+    <script src="booking.js"></script>
+    <script
+      src="https://kit.fontawesome.com/27738427d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <script src="jquery-3.6.1.js"></script>
-  <script src="sidebar.js"></script>
-  <script src="header-nav.js"></script>
-  <script src="https://kit.fontawesome.com/27738427d6.js" crossorigin="anonymous"></script>
-</head>
+  <body>
+    <header id="clubTitle" class="header-index-link">
+      <a href="index.html" class="logo"> Skänninge Tennisförening</a>
+      <nav>
+        <ul>
+          <li class="hover-underline-animation">
+            <a href="index.html" id="nav-index"> Om STF</a>
+          </li>
+          <li class="hover-underline-animation">
+            <a href="banor.html" id="nav-banor">Banor</a>
+          </li>
+          <li class="hover-underline-animation">
+            <a href="omkl.html" id="nav-omkl">Omklädningsrum</a>
+          </li>
+          <li class="hover-underline-animation">
+            <a href="bastu.html" id="nav-bastu">Bastu</a>
+          </li>
+          <li class="hover-underline-animation">
+            <a href="" id="nav-spons">Våra Sponsorer</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header id="clubTitle" class="header-index-link">
-    <a href="index.html" class="logo"> Skänninge Tennisförening</a>
-    <nav>
-      <ul>
-        <li class="hover-underline-animation">
-          <a href="index.html" id="nav-index"> Om STF</a>
-        </li>
-        <li class="hover-underline-animation">
-          <a href="banor.html" id="nav-banor">Banor</a>
-        </li>
-        <li class="hover-underline-animation">
-          <a href="omkl.html" id="nav-omkl">Omklädningsrum</a>
-        </li>
-        <li class="hover-underline-animation">
-          <a href="bastu.html" id="nav-bastu">Bastu</a>
-        </li>
-        <li class="hover-underline-animation">
-          <a href="" id="nav-spons">Våra Sponsorer</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <main class="container">
+      <img
+        src="resources/yellow-g0806552c1_1920.jpg"
+        class="banner-image"
+        alt="En serie skåp i ett omklädningsrum."
+      />
+      <article class="padded-container">
+        <h1 class="centered">Omklädningsrum</h1>
+        <p class="centered">
+          Vi erbjuder bokningsbara omklädningsrum via
+          <a href="#booking">bokningssformuläret</a>.
+        </p>
+      </article>
 
-  <main class="container">
-    <img src="resources/yellow-g0806552c1_1920.jpg" class="banner-image" alt="En serie skåp i ett omklädningsrum." />
-    <article class="padded-container">
-      <h1 class="centered">Omklädningsrum</h1>
-      <p class="centered">
-        Vi erbjuder bokningsbara omklädningsrum via
-        <a href="#booking">bokningssformuläret</a>.
-      </p>
-    </article>
+      <section class="padded-container">
+        <h2 id="booking">Boka Omklädningsrum</h2>
+        <form name="omkl">
+          <fieldset>
+            <h3>Rum</h3>
+            <section class="room">
+              <div class="flex-row">
+                <label for="herr"
+                  >Herr
+                  <input
+                    type="radio"
+                    id="herr"
+                    name="herr-dam"
+                    checked
+                    class="inline"
+                  />
+                </label>
+              </div>
+              <div class="flex-row">
+                <label for="dam"
+                  >Dam
+                  <input type="radio" id="dam" name="herr-dam" class="inline" />
+                </label>
+              </div>
+            </section>
+          </fieldset>
+          <fieldset>
+            <h3>Tid</h3>
+            <section class="time">
+              <div class="flex-row">
+                <label for="time-date"
+                  >Datum
+                  <input type="date" id="time-date" name="time-date" required
+                /></label>
+              </div>
+              <div class="flex-row">
+                <label for="time-slot"
+                  >Tidslag
+                  <select id="time-slot" name="time-slot" required>
+                    <option value="">(select one)</option>
+                    <option value="1">8 - 10</option>
+                    <option value="2">10 - 12</option>
+                    <option value="3">12 - 14</option>
+                    <option value="4">14 - 16</option>
+                    <option value="5">16 - 18</option>
+                    <option value="6">18 - 20</option>
+                    <option value="7">Förmiddag (8-13)</option>
+                    <option value="8">Eftermiddag (13-20)</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+          </fieldset>
+          <fieldset>
+            <h3>Personlig Information</h3>
+            <label for="booker-name"
+              >Namn
+              <input id="booker-name" name="booker-name" type="text" required />
+            </label>
+            <label for="email"
+              >Email
+              <input id="email" name="email" type="email" required />
+            </label>
+            <label for="phone-number"
+              >Telefonnummer
+              <input
+                id="phone-number"
+                name="phone-number"
+                type="tel"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset>
+            <label for="add-info" class="large-label"
+              >Ytterligare Information
+              <textarea
+                id="add-info"
+                name="add-info"
+                rows="4"
+                placeholder="t.ex. sällskapsstorlek för större grupper, om racket behöver lånas eller andra särskilda omständigheter"
+              ></textarea>
+            </label>
+          </fieldset>
+          <input type="submit" id="submit" value="Boka" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p id="footer-logo">STF</p>
+      <p></p>
+      <address>
+        Skänninge Tennisförening <br />
+        Villa Villekulla 123<br />
+        Skänninge <br />
+        Sverige <br />
+      </address>
+    </footer>
 
-    <section class="padded-container">
-      <h2 id="booking">Boka Omklädningsrum</h2>
-      <form onsubmit="return validateForm('omkl')">
-        <fieldset>
-          <h3>Rum</h3>
-          <section class="room">
-            <div class="flex-row">
-              <label for="herr">Herr
-                <input type="radio" id="herr" name="herr-dam" checked class="inline" />
-              </label>
-            </div>
-            <div class="flex-row">
-              <label for="dam">Dam
-                <input type="radio" id="dam" name="herr-dam" class="inline" />
-              </label>
-            </div>
-          </section>
-        </fieldset>
-        <fieldset>
-          <h3>Tid</h3>
-          <section class="time">
-            <div class="flex-row">
-              <label for="time-date">Datum
-                <input type="date" id="time-date" name="time-date" required /></label>
-            </div>
-            <div class="flex-row">
-              <label for="time-slot">Tidslag
-                <select id="time-slot" name="time-slot" required>
-                  <option value="">(select one)</option>
-                  <option value="1">8 - 10</option>
-                  <option value="2">10 - 12</option>
-                  <option value="3">12 - 14</option>
-                  <option value="4">14 - 16</option>
-                  <option value="5">16 - 18</option>
-                  <option value="6">18 - 20</option>
-                  <option value="7">Förmiddag (8-13)</option>
-                  <option value="8">Eftermiddag (13-20)</option>
-                </select>
-              </label>
-            </div>
-          </section>
-        </fieldset>
-        <fieldset>
-          <h3>Personlig Information</h3>
-          <label for="booker-name">Namn
-            <input id="booker-name" name="booker-name" type="text" required />
-          </label>
-          <label for="email">Email
-            <input id="email" name="email" type="email" required />
-          </label>
-          <label for="phone-number">Telefonnummer
-            <input id="phone-number" name="phone-number" type="tel" required />
-          </label>
-        </fieldset>
-        <fieldset>
-          <label for="add-info" class="large-label">Ytterligare Information
-            <textarea id="add-info" name="add-info" rows="4"
-              placeholder="t.ex. sällskapsstorlek för större grupper, om racket behöver lånas eller andra särskilda omständigheter"></textarea>
-          </label>
-        </fieldset>
-        <input type="submit" id="submit" value="Boka" />
-      </form>
-    </section>
-  </main>
-  <footer>
-    <p id="footer-logo">STF</p>
-    <p></p>
-    <address>
-      Skänninge Tennisförening <br />
-      Villa Villekulla 123<br />
-      Skänninge <br />
-      Sverige <br />
-    </address>
-  </footer>
-
-  <span onclick="openNav()" class="sidenav-button" id="sidenav-button">◄</span>
-  <!--Sidebar-->
-  <div class="sidenav slide-sidenav" id="sidenav">
-    <img src="tennis-player-with-racket.png" alt="Match icons created by Freepik - Flaticon" />
-    <section class="sidenavlistwrapper">
-      <h2>Bokning</h2>
-      <ul class="sidenavlist">
-        <li><a href="banor.html#booking">Banor</a></li>
-        <li class="sidebartitle">Omklädningsrum</li>
-        <li class="inlineitem" style="width: 50%">
-          <a href="omkl.html?room=herr#booking">Herr</a>
-        </li>
-        <li class="inlineitem" style="width: 50%">
-          <a href="omkl.html?room=dam#booking">Dam</a>
-        </li>
-        <li class="afterinline"><a href="bastu.html#booking">Bastu</a></li>
-      </ul>
-    </section>
-    <section class="calendar">
-      <h3>Kalender</h3>
-      <p>Under konstruktion</p>
-    </section>
-  </div>
-</body>
-
+    <span onclick="openNav()" class="sidenav-button" id="sidenav-button"
+      >◄</span
+    >
+    <!--Sidebar-->
+    <div class="sidenav slide-sidenav" id="sidenav">
+      <img
+        src="tennis-player-with-racket.png"
+        alt="Match icons created by Freepik - Flaticon"
+      />
+      <section class="sidenavlistwrapper">
+        <h2>Bokning</h2>
+        <ul class="sidenavlist">
+          <li><a href="banor.html#booking">Banor</a></li>
+          <li class="sidebartitle">Omklädningsrum</li>
+          <li class="inlineitem" style="width: 50%">
+            <a href="omkl.html?room=herr#booking">Herr</a>
+          </li>
+          <li class="inlineitem" style="width: 50%">
+            <a href="omkl.html?room=dam#booking">Dam</a>
+          </li>
+          <li class="afterinline"><a href="bastu.html#booking">Bastu</a></li>
+        </ul>
+      </section>
+      <section class="calendar">
+        <h3>Kalender</h3>
+        <p>Under konstruktion</p>
+      </section>
+    </div>
+  </body>
 </html>

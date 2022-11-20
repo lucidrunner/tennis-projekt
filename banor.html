@@ -1,229 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>STF - Banor</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-bokning.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <title>STF - Banor</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles-bokning.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet" />
+    <script src="jquery-3.6.1.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="header-nav.js"></script>
+    <script src="booking.js"></script>
+    <script
+      src="https://kit.fontawesome.com/27738427d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <script src="jquery-3.6.1.js"></script>
-  <script src="sidebar.js"></script>
-  <script src="header-nav.js"></script>
-  <script src="https://kit.fontawesome.com/27738427d6.js" crossorigin="anonymous"></script>
-</head>
+  <body>
+    <header id="clubTitle" class="header-index-link">
+      <a href="index.html" class="logo"> Skänninge Tennisförening</a>
+      <nav>
+        <ul>
+          <li class="hover-underline-animation">
+            <a href="index.html" id="nav-index"> Om STF</a>
+          </li>
+          <li class="hover-underline-animation">
+            <a href="banor.html" id="nav-banor">Banor</a>
+          </li>
+          <li class="hover-underline-animation">
+            <a href="omkl.html" id="nav-omkl">Omklädningsrum</a>
+          </li>
+          <li class="hover-underline-animation">
+            <a href="bastu.html" id="nav-bastu">Bastu</a>
+          </li>
+          <li class="hover-underline-animation">
+            <a href="" id="nav-spons">Våra Sponsorer</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header id="clubTitle" class="header-index-link">
-    <a href="index.html" class="logo"> Skänninge Tennisförening</a>
-    <nav>
-      <ul>
-        <li class="hover-underline-animation">
-          <a href="index.html" id="nav-index"> Om STF</a>
-        </li>
-        <li class="hover-underline-animation">
-          <a href="banor.html" id="nav-banor">Banor</a>
-        </li>
-        <li class="hover-underline-animation">
-          <a href="omkl.html" id="nav-omkl">Omklädningsrum</a>
-        </li>
-        <li class="hover-underline-animation">
-          <a href="bastu.html" id="nav-bastu">Bastu</a>
-        </li>
-        <li class="hover-underline-animation">
-          <a href="" id="nav-spons">Våra Sponsorer</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="container">
-    <img src="resources/sport-g3724c55be_1920.jpg" class="banner-image" />
-    <article class="padded-container">
-      <h1 class="centered">Våra Banor</h1>
-      <p class="centered">
-        Vi erbjuder en serie olika bantyper, från utomhusbanor på gräs och
-        lera, till inomhusbanor. Alla våra banor är öppna för bokning via
-        <a href="#booking">bokningssformuläret</a>.
-      </p>
-      <article>
-        <h2>Gräsbanor</h2>
-        <p>
-          Grass courts are the fastest type of courts in common use.[7] They
-          consist of grass grown on very hard-packed soil, which adds
-          additional variables: bounces depend on how healthy the grass is,
-          how recently it has been mowed, and the wear and tear of recent
-          play. Points are usually very quick where fast, low bounces keep
-          rallies short, and the serve plays a more important role than on
-          other surfaces. Grass courts tend to favour serve-and-volley tennis
-          players. Grass courts were once among the most common tennis
-          surfaces, but are now rare due to high maintenance costs, as they
-          must be watered and mown often, and take a longer time to dry after
-          rain than hard courts. Historically for the Grand Slams grass courts
-          have been used at Wimbledon since 1877, the US Open from 1881 to
-          1974, and the Australian Open from 1905 to 1987.
+    <main class="container">
+      <img src="resources/sport-g3724c55be_1920.jpg" class="banner-image" />
+      <article class="padded-container">
+        <h1 class="centered">Våra Banor</h1>
+        <p class="centered">
+          Vi erbjuder en serie olika bantyper, från utomhusbanor på gräs och
+          lera, till inomhusbanor. Alla våra banor är öppna för bokning via
+          <a href="#booking">bokningssformuläret</a>.
         </p>
+        <article>
+          <h2>Gräsbanor</h2>
+          <p>
+            Grass courts are the fastest type of courts in common use.[7] They
+            consist of grass grown on very hard-packed soil, which adds
+            additional variables: bounces depend on how healthy the grass is,
+            how recently it has been mowed, and the wear and tear of recent
+            play. Points are usually very quick where fast, low bounces keep
+            rallies short, and the serve plays a more important role than on
+            other surfaces. Grass courts tend to favour serve-and-volley tennis
+            players. Grass courts were once among the most common tennis
+            surfaces, but are now rare due to high maintenance costs, as they
+            must be watered and mown often, and take a longer time to dry after
+            rain than hard courts. Historically for the Grand Slams grass courts
+            have been used at Wimbledon since 1877, the US Open from 1881 to
+            1974, and the Australian Open from 1905 to 1987.
+          </p>
+        </article>
+        <article>
+          <h2>Lerbanor</h2>
+          <p>
+            Clay courts are made of crushed shale, stone or brick.[7] The French
+            Open is the only Grand Slam tournament to use clay courts. Clay
+            courts slow down the ball and produce a high bounce in comparison to
+            grass or hard courts.[7] For this reason, the clay court takes away
+            many of the advantages of big serves, which makes it hard for
+            serve-based players to dominate on the surface. Clay courts are
+            cheaper to construct than other types of tennis courts, but a clay
+            surface costs more to maintain. Clay courts need to be rolled to
+            preserve flatness. The clay's water content must be balanced; green
+            clay courts generally require the courts to be sloped to allow water
+            run-off. Clay courts are more common in Europe and Latin America
+            than in North America, and tend to heavily favour baseline players.
+            Historically for the Grand Slams clay courts have been used at the
+            French Open since 1891 and the US Open from 1975 to 1977.
+          </p>
+        </article>
+        <article>
+          <h2>Inomhusbanor</h2>
+          <p>
+            Some tennis courts are indoors, which allows play regardless of
+            weather conditions and is more comfortable for spectators. Different
+            court surfaces have been used indoors. Hard courts are most common
+            indoors, as they are the easiest to install and maintain. If the
+            installation is permanent, they are constructed on an asphalt or
+            concrete base, as with outdoor courts. Temporary indoor hard courts
+            are typically constructed using wooden floor panels topped with
+            acrylic which are installed over the venue's standard floor. This is
+            the system used for modern indoor professional events such as the
+            ATP Finals. Clay courts can be installed indoors with subsurface
+            watering systems to keep the clay from drying out, and have been
+            used for Davis Cup matches. Carpet courts were once the most
+            prominent of indoor surfaces, especially in temporary venues, but
+            have largely been replaced by removable hard courts. They were used
+            on both the ATP World Tour and World Championship Tennis circuits,
+            though no events currently use them. Historically, other surfaces
+            have been used indoors such as hardwood flooring at the defunct
+            World Covered Court Championships and London Indoor Professional
+            Championships.
+          </p>
+        </article>
       </article>
-      <article>
-        <h2>Lerbanor</h2>
-        <p>
-          Clay courts are made of crushed shale, stone or brick.[7] The French
-          Open is the only Grand Slam tournament to use clay courts. Clay
-          courts slow down the ball and produce a high bounce in comparison to
-          grass or hard courts.[7] For this reason, the clay court takes away
-          many of the advantages of big serves, which makes it hard for
-          serve-based players to dominate on the surface. Clay courts are
-          cheaper to construct than other types of tennis courts, but a clay
-          surface costs more to maintain. Clay courts need to be rolled to
-          preserve flatness. The clay's water content must be balanced; green
-          clay courts generally require the courts to be sloped to allow water
-          run-off. Clay courts are more common in Europe and Latin America
-          than in North America, and tend to heavily favour baseline players.
-          Historically for the Grand Slams clay courts have been used at the
-          French Open since 1891 and the US Open from 1975 to 1977.
-        </p>
-      </article>
-      <article>
-        <h2>Inomhusbanor</h2>
-        <p>
-          Some tennis courts are indoors, which allows play regardless of
-          weather conditions and is more comfortable for spectators. Different
-          court surfaces have been used indoors. Hard courts are most common
-          indoors, as they are the easiest to install and maintain. If the
-          installation is permanent, they are constructed on an asphalt or
-          concrete base, as with outdoor courts. Temporary indoor hard courts
-          are typically constructed using wooden floor panels topped with
-          acrylic which are installed over the venue's standard floor. This is
-          the system used for modern indoor professional events such as the
-          ATP Finals. Clay courts can be installed indoors with subsurface
-          watering systems to keep the clay from drying out, and have been
-          used for Davis Cup matches. Carpet courts were once the most
-          prominent of indoor surfaces, especially in temporary venues, but
-          have largely been replaced by removable hard courts. They were used
-          on both the ATP World Tour and World Championship Tennis circuits,
-          though no events currently use them. Historically, other surfaces
-          have been used indoors such as hardwood flooring at the defunct
-          World Covered Court Championships and London Indoor Professional
-          Championships.
-        </p>
-      </article>
-    </article>
 
-    <section class="padded-container">
-      <h2 id="booking">Boka Tennisbana</h2>
-      <form onsubmit="return validateForm('bana')">
-        <fieldset>
-          <h3>Bana</h3>
-          <section class="courts">
-            <div class="flex-row">
-              <label for="court-1">1 (Gräs)
-                <input type="radio" id="court-1" name="court-select" checked class="inline" />
-              </label>
-            </div>
-            <div class="flex-row">
-              <label for="court-2">2 (Gräs)
-                <input type="radio" id="court-2" name="court-select" class="inline" />
-              </label>
-            </div>
-            <div class="flex-row">
-              <label for="court-3">3 (Lera)
-                <input type="radio" id="court-3" name="court-select" class="inline" />
-              </label>
-            </div>
-            <div class="flex-row">
-              <label for="court-4">4 (Inomhus)
-                <input type="radio" id="court-4" name="court-select" class="inline" />
-              </label>
-            </div>
-          </section>
-        </fieldset>
-        <fieldset>
-          <h3>Tid</h3>
-          <section class="time">
-            <div class="flex-row">
-              <label for="time-date">Datum
-                <input type="date" id="time-date" name="time-date" required /></label>
-            </div>
-            <div class="flex-row">
-              <label for="time-slot">Tidslag
-                <select id="time-slot" name="time-slot" required>
-                  <option value="">(select one)</option>
-                  <option value="1">8 - 10</option>
-                  <option value="2">10 - 12</option>
-                  <option value="3">12 - 14</option>
-                  <option value="4">14 - 16</option>
-                  <option value="5">16 - 18</option>
-                  <option value="6">18 - 20</option>
-                  <option value="7">Förmiddag (8-13)</option>
-                  <option value="8">Eftermiddag (13-20)</option>
-                </select>
-              </label>
-            </div>
-          </section>
-          <!--Expanderar på detta senare - idéen för funktionalitet är att det görs en crosscheck med vad som är bokat där också (och man också kan välja herr/dam osv)-->
-          <label>Boka Tillhörande Omklädningsrum?
-            <input type="checkbox" id="book-dressroom" name="book-dressroom" class="inline" /></label>
-        </fieldset>
-        <fieldset>
-          <h3>Personlig Information</h3>
-          <label for="booker-name">Namn
-            <input id="booker-name" name="booker-name" type="text" required />
-          </label>
-          <label for="email">Email
-            <input id="email" name="email" type="email" required />
-          </label>
-          <label for="phone-number">Telefonnummer
-            <input id="phone-number" name="phone-number" type="tel" required />
-          </label>
-        </fieldset>
-        <fieldset>
-          <label for="add-info" class="large-label">Ytterligare Information
-            <textarea id="add-info" name="add-info" rows="4"
-              placeholder="t.ex. sällskapsstorlek för större grupper, om racket behöver lånas eller andra särskilda omständigheter"></textarea>
-          </label>
-        </fieldset>
-        <input type="submit" id="submit" value="Boka" />
-      </form>
-    </section>
-  </main>
+      <section class="padded-container">
+        <h2 id="booking">Boka Tennisbana</h2>
+        <form name="bana">
+          <fieldset>
+            <h3>Bana</h3>
+            <section class="courts">
+              <div class="flex-row">
+                <label for="court-1"
+                  >1 (Gräs)
+                  <input
+                    type="radio"
+                    id="court-1"
+                    name="court-select"
+                    checked
+                    class="inline"
+                  />
+                </label>
+              </div>
+              <div class="flex-row">
+                <label for="court-2"
+                  >2 (Gräs)
+                  <input
+                    type="radio"
+                    id="court-2"
+                    name="court-select"
+                    class="inline"
+                  />
+                </label>
+              </div>
+              <div class="flex-row">
+                <label for="court-3"
+                  >3 (Lera)
+                  <input
+                    type="radio"
+                    id="court-3"
+                    name="court-select"
+                    class="inline"
+                  />
+                </label>
+              </div>
+              <div class="flex-row">
+                <label for="court-4"
+                  >4 (Inomhus)
+                  <input
+                    type="radio"
+                    id="court-4"
+                    name="court-select"
+                    class="inline"
+                  />
+                </label>
+              </div>
+            </section>
+          </fieldset>
+          <fieldset>
+            <h3>Tid</h3>
+            <section class="time">
+              <div class="flex-row">
+                <label for="time-date"
+                  >Datum
+                  <input type="date" id="time-date" name="time-date" required
+                /></label>
+              </div>
+              <div class="flex-row">
+                <label for="time-slot"
+                  >Tidslag
+                  <select id="time-slot" name="time-slot" required>
+                    <option value="">(select one)</option>
+                    <option value="1">8 - 10</option>
+                    <option value="2">10 - 12</option>
+                    <option value="3">12 - 14</option>
+                    <option value="4">14 - 16</option>
+                    <option value="5">16 - 18</option>
+                    <option value="6">18 - 20</option>
+                    <option value="7">Förmiddag (8-13)</option>
+                    <option value="8">Eftermiddag (13-20)</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+            <!--Expanderar på detta senare - idéen för funktionalitet är att det görs en crosscheck med vad som är bokat där också (och man också kan välja herr/dam osv)-->
+            <label
+              >Boka Tillhörande Omklädningsrum?
+              <input
+                type="checkbox"
+                id="book-dressroom"
+                name="book-dressroom"
+                class="inline"
+            /></label>
+          </fieldset>
+          <fieldset>
+            <h3>Personlig Information</h3>
+            <label for="booker-name"
+              >Namn
+              <input id="booker-name" name="booker-name" type="text" required />
+            </label>
+            <label for="email"
+              >Email
+              <input id="email" name="email" type="email" required />
+            </label>
+            <label for="phone-number"
+              >Telefonnummer
+              <input
+                id="phone-number"
+                name="phone-number"
+                type="tel"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset>
+            <label for="add-info" class="large-label"
+              >Ytterligare Information
+              <textarea
+                id="add-info"
+                name="add-info"
+                rows="4"
+                placeholder="t.ex. sällskapsstorlek för större grupper, om racket behöver lånas eller andra särskilda omständigheter"
+              ></textarea>
+            </label>
+          </fieldset>
+          <input type="submit" id="submit" value="Boka" />
+        </form>
+      </section>
+    </main>
 
-  <footer>
-    <p id="footer-logo">STF</p>
-    <p></p>
-    <address>
-      Skänninge Tennisförening <br />
-      Villa Villekulla 123<br />
-      Skänninge <br />
-      Sverige <br />
-    </address>
-  </footer>
+    <footer>
+      <p id="footer-logo">STF</p>
+      <p></p>
+      <address>
+        Skänninge Tennisförening <br />
+        Villa Villekulla 123<br />
+        Skänninge <br />
+        Sverige <br />
+      </address>
+    </footer>
 
-  <span onclick="openNav()" class="sidenav-button" id="sidenav-button">◄</span>
-  <!--Sidebar-->
-  <div class="sidenav slide-sidenav" id="sidenav">
-    <img src="tennis-player-with-racket.png" alt="Match icons created by Freepik - Flaticon" />
-    <section class="sidenavlistwrapper">
-      <h2>Bokning</h2>
-      <ul class="sidenavlist">
-        <li><a href="banor.html#booking">Banor</a></li>
-        <li class="sidebartitle">Omklädningsrum</li>
-        <li class="inlineitem" style="width: 50%">
-          <a href="omkl.html?room=herr#booking">Herr</a>
-        </li>
-        <li class="inlineitem" style="width: 50%">
-          <a href="omkl.html?room=dam#booking">Dam</a>
-        </li>
-        <li class="afterinline"><a href="bastu.html#booking">Bastu</a></li>
-      </ul>
-    </section>
-    <section class="calendar">
-      <h3>Kalender</h3>
-      <p>Under konstruktion</p>
-    </section>
-  </div>
-</body>
-
+    <span onclick="openNav()" class="sidenav-button" id="sidenav-button"
+      >◄</span
+    >
+    <!--Sidebar-->
+    <div class="sidenav slide-sidenav" id="sidenav">
+      <img
+        src="tennis-player-with-racket.png"
+        alt="Match icons created by Freepik - Flaticon"
+      />
+      <section class="sidenavlistwrapper">
+        <h2>Bokning</h2>
+        <ul class="sidenavlist">
+          <li><a href="banor.html#booking">Banor</a></li>
+          <li class="sidebartitle">Omklädningsrum</li>
+          <li class="inlineitem" style="width: 50%">
+            <a href="omkl.html?room=herr#booking">Herr</a>
+          </li>
+          <li class="inlineitem" style="width: 50%">
+            <a href="omkl.html?room=dam#booking">Dam</a>
+          </li>
+          <li class="afterinline"><a href="bastu.html#booking">Bastu</a></li>
+        </ul>
+      </section>
+      <section class="calendar">
+        <h3>Kalender</h3>
+        <p>Under konstruktion</p>
+      </section>
+    </div>
+  </body>
 </html>

@@ -6,9 +6,15 @@ window.onload = function () {
     today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
   datePicker.value = dateAsString;
   datePicker.min = dateAsString;
+
+  //Sign up to our validation method in js rather than as attributes
+  document.forms[0].onsubmit = function () {
+    validateForm(document.forms[0].name);
+  };
 };
 
 function validateForm(identifier) {
+  console.log(identifier);
   let passed = false;
   switch (identifier) {
     case "bastu":
