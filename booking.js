@@ -1,3 +1,12 @@
+//Restrict calendar to minimum of today (and also set the default date to today)
+window.onload = function(){
+    let datePicker = document.getElementById("time-date");
+    const today = new Date();
+    const dateAsString = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+    datePicker.value = dateAsString;
+    datePicker.min = dateAsString;
+};
+
 function validateForm(identifier) {
     let passed = false;
     switch (identifier) {
