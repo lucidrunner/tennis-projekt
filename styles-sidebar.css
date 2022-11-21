@@ -58,14 +58,14 @@ Sliding Navbar
   margin: 10px 0 0 0;
   filter: invert(83%) sepia(17%) saturate(5581%) hue-rotate(342deg)
     brightness(98%) contrast(85%);
-    
+
   transition: var(--resize-transition-time);
   transition-property: margin-top;
 }
 
 @media (max-width: 780px) {
   .sidenav img {
-    margin-top: 50px;
+    margin-top: 44px;
   }
 }
 

@@ -12,3 +12,19 @@ function closeNav() {
   button.style.transform = "scaleX(1)";
   button.onclick = openNav;
 }
+
+jQuery(function () {
+  const mqMobile = window.matchMedia("(max-width: 425px)");
+  mqMobile.addEventListener("change", mqHandler);
+
+  mqHandler(mqMobile);
+
+  function mqHandler(e) {
+    if (e.matches) {
+      closeNav();
+      $("#sidenav-button").addClass("hidden");
+    } else {
+      $("#sidenav-button").removeClass("hidden");
+    }
+  }
+});

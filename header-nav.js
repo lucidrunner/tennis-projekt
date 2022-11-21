@@ -1,10 +1,11 @@
+import HamburgerMenu from "./components/HamburgerMenu.js";
+
 jQuery(function () {
   const mqMobile = window.matchMedia("(max-width: 425px)");
   const navIndexText = "Om STF";
   const navBanorText = "Banor";
   const navOmklText = "Omklädningsrum";
   const navBastuText = "Bastu";
-  const navSponsText = "Våra Sponsorer";
 
   mqMobile.addEventListener("change", mqHandler);
 
@@ -22,7 +23,8 @@ jQuery(function () {
       $("#nav-banor").text("").addClass("fa-solid fa-volleyball fa-lg");
       $("#nav-omkl").text("").addClass("fa-solid fa-restroom fa-lg");
       $("#nav-bastu").text("").addClass("fa-solid fa-hot-tub-person fa-lg");
-      $("#nav-spons").text("").addClass("fa-solid fa-medal fa-lg");
+      $("#nav-list").append(HamburgerMenu);
+      $("#nav-dropdown-item").on("click", toggleMenu);
     } else {
       $("#nav-index").text(navIndexText).removeClass("fa-solid fa-house fa-lg");
       $("#nav-banor")
@@ -34,7 +36,22 @@ jQuery(function () {
       $("#nav-bastu")
         .text(navBastuText)
         .removeClass("fa-solid fa-hot-tub-person fa-lg");
-      $("#nav-spons").text(navSponsText).removeClass("fa-solid fa-medal fa-lg");
+      menuCleanup();
     }
+  }
+
+  function toggleMenu() {
+    const menu = $("#hamburger-container");
+    menu.toggleClass("hidden");
+    console.log(menu.hasClass("hidden"));
+    console.log("clicked");
+  }
+
+  function menuCleanup() {
+    $("#nav-dropdown-item").off();
+    $("#nav-dropdown-item").remove();
+    const menu = $("#hamburger-container");
+    menu.addClass("hidden");
+    console.log("cleanup");
   }
 });

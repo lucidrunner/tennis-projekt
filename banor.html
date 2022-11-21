@@ -13,7 +13,8 @@
 
     <script src="jquery-3.6.1.js"></script>
     <script src="sidebar.js"></script>
-    <script src="header-nav.js"></script>
+    <script type="module" src="components\HamburgerMenu.js"></script>
+    <script type="module" src="header-nav.js"></script>
     <script src="booking.js"></script>
     <script
       src="https://kit.fontawesome.com/27738427d6.js"
@@ -25,7 +26,7 @@
     <header id="clubTitle" class="header-index-link">
       <a href="index.html" class="logo"> Skänninge Tennisförening</a>
       <nav>
-        <ul>
+        <ul id="nav-list" class="main-nav">
           <li class="hover-underline-animation">
             <a href="index.html" id="nav-index"> Om STF</a>
           </li>
@@ -37,9 +38,6 @@
           </li>
           <li class="hover-underline-animation">
             <a href="bastu.html" id="nav-bastu">Bastu</a>
-          </li>
-          <li class="hover-underline-animation">
-            <a href="" id="nav-spons">Våra Sponsorer</a>
           </li>
         </ul>
       </nav>

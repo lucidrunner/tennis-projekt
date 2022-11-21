@@ -1,0 +1,38 @@
+.hamburger-anchor {
+  position: relative;
+}
+
+.hamburger-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  position: absolute;
+  background-color: rgb(173, 216, 230);
+  top: 35px;
+  right: 0;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style-type: none;
+  border-top: 10px solid var(--sidenavbordercolor);
+  border-bottom: 10px solid var(--sidenavbordercolor);
+  border-left: 1px solid var(--sidenavbordercolor);
+}
+
+.hamburger-menu li {
+  background-color: var(--darkshade);
+  width: 100%;
+  padding: 0.5rem 2rem;
+  display: block;
+}
+
+.hamburger-menu .hamburger-title {
+  background-color: var(--maincolor);
+  font-weight: bold;
+  color: white;
+}
+
+.hamburger-menu li:not(.hamburger-title):hover {
+  background-color: var(--lightshade);
+}
