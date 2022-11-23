@@ -7,10 +7,11 @@ window.onload = function () {
   datePicker.value = dateAsString;
   datePicker.min = dateAsString;
 
-  //Sign up to our validation method in js rather than as attributes
-  document.forms[0].onsubmit = function () {
-    validateForm(document.forms[0].name);
-  };
+  // //Sign up to our validation method in js rather than as attributes
+  //Actually, this didn't work :D
+  // document.forms[0].onsubmit = function () {
+  //   validateForm(document.forms[0].name);
+  // };
 };
 
 function validateForm(identifier) {
